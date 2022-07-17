@@ -58,9 +58,9 @@ module "key_pair" {
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCIGs8R6P2+0QQ1JHAZ8nFeRCvG1fqUe7TZJpFNpYFc7oEqL8uQJTr2E/YKp+z6aVMiz81bef3rElgVjAllYPXQJFiBiWe+txlh/IsrQPN1H/S90CyokjyxG7ddHNCJX7sWtpsnUZqcS4VU4wlBd2z5WFtKdC7Am89R8VY5GKOBg3RKIElv1WYMjyWq7gbsemQuf2KARA38Huq0YQ8x2R7WatdyhFJF+kbVKfAdr6pE5NnP87IFC+tszqCnSIk5ZSSk6kkUoAeZCCPigxIFPTwQ78dawc50Cv0eX/kH0zQWfYdk9GS/LT6Maqck2R6nmEsLU/5oM6Pwzl/vENrkWg4x rsa-key-20211110"
 }
 
-module "ec2_instance" {
-  source  = "terraform-aws-modules/ec2-instance/aws"
-
+# module "ec2_instance" {
+#   source  = "terraform-aws-modules/ec2-instance/aws"
+resource "aws_instance" "centos" {
   name                   = "centos"
   ami                    = "ami-051f0947e420652a9"
   instance_type          = "t2.micro"
