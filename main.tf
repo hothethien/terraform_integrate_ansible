@@ -61,7 +61,7 @@ module "key_pair" {
 # module "ec2_instance" {
 #   source  = "terraform-aws-modules/ec2-instance/aws"
 resource "aws_instance" "centos" {
-  name                   = "centos"
+  # name                   = "centos"
   ami                    = "ami-051f0947e420652a9"
   instance_type          = "t2.micro"
   key_name               = "thienht"
