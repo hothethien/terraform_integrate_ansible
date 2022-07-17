@@ -86,7 +86,7 @@ module "ec2_instance" {
       user        = "ec2-user"
       private_key = file("private.pem")
       host        = self.public_ip
-    }
-
+    } 
+  }
 }
 
